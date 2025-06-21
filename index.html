@@ -1,0 +1,753 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px 'Helvetica Neue'; min-height: 25.0px}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+  </style>
+</head>
+<body>
+<p class="p1"><b></b><br></p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3">&lt;!DOCTYPE html&gt;</p>
+<p class="p3">&lt;html lang="ko"&gt;</p>
+<p class="p3">&lt;head&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;title&gt;사주팔자 올해의 운세&lt;/title&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+KR:wght@400;500;700&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>body {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>font-family: 'Noto Sans KR', 'Inter', sans-serif;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>.fortune-text, .feature-text {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>white-space: pre-wrap;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>line-height: 1.8;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>.ad-banner {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>background-color: #e9ecef;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>border: 1px dashed #adb5bd;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>color: #495057;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>justify-content: center;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>align-items: center;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>text-align: center;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>font-size: 0.875rem;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>#languageDropdown {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>z-index: 50;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>.feature-section {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>margin-top: 2rem; /* 상단 여백 추가 */</p>
+<p class="p3"><span class="Apple-converted-space">            </span>padding: 1.5rem;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>background-color: #f8fafc; /* 약간 다른 배경색 */</p>
+<p class="p3"><span class="Apple-converted-space">            </span>border-radius: 0.5rem;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p3">&lt;/head&gt;</p>
+<p class="p3">&lt;body class="bg-gray-100"&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;div class="flex flex-col min-h-screen"&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white p-6 shadow-lg relative"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;h1 id="headerTitle" class="text-3xl font-bold text-center"&gt;🔮 사주팔자로 보는 2025년 나의 운세 🔮&lt;/h1&gt;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;div class="absolute top-4 right-4 md:top-6 md:right-6"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;div class="relative"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;button id="languageSelectorButton" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:bg-indigo-500 hover:bg-opacity-75 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>&lt;path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A11.978 11.978 0 0112 15c0 2.909 1.044 5.556 2.757 7.616M12 15c2.485 0 4.5 4.03 4.5 9h-9c0-4.97 2.015-9 4.5-9zm0 0a8.997 8.997 0 017.843-4.582M12 15a8.997 8.997 0 00-7.843-4.582" /&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;/svg&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;span id="currentLangDisplay" class="ml-2 text-sm font-medium"&gt;한국어&lt;/span&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="languageDropdown" class="hidden origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 lang-option" data-lang="ko"&gt;한국어&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 lang-option" data-lang="en"&gt;English&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 lang-option" data-lang="ja"&gt;日本語&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 lang-option" data-lang="zh"&gt;中文&lt;/a&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-1 w-full max-w-screen-2xl mx-auto mt-4 md:mt-8 px-2 sm:px-4"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;aside class="w-1/6 lg:w-1/5 p-2 md:p-4 hidden md:flex flex-col justify-start items-center space-y-4"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;div class="ad-banner w-full h-64 lg:h-96"&gt;광고 배너 (좌측 상단)&lt;br&gt;Ad Banner (Left Top)&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;div class="ad-banner w-full h-64 lg:h-96"&gt;광고 배너 (좌측 하단)&lt;br&gt;Ad Banner (Left Bottom)&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;/aside&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;main class="flex-1 p-2 md:p-6 bg-white rounded-xl shadow-2xl mx-0 md:mx-4"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;section id="input-section" class="mb-8 p-6 bg-slate-50 rounded-lg shadow-inner"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;h2 id="inputSectionTitle" class="text-2xl font-semibold mb-6 text-gray-800 text-center"&gt;생년월일을 입력해주세요&lt;/h2&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div class="grid grid-cols-1 md:grid-cols-3 gap-x-6 gap-y-4 mb-6"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>&lt;label for="birthYear" id="yearLabelElement" class="block text-sm font-medium text-gray-700 mb-1"&gt;생년 (예: 1990)&lt;/label&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="birthYear" name="birthYear" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 p-3 text-lg" placeholder="1990"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>&lt;label for="birthMonth" id="monthLabelElement" class="block text-sm font-medium text-gray-700 mb-1"&gt;생월 (예: 7)&lt;/label&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="birthMonth" name="birthMonth" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 p-3 text-lg" placeholder="7"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>&lt;label for="birthDay" id="dayLabelElement" class="block text-sm font-medium text-gray-700 mb-1"&gt;생일 (예: 15)&lt;/label&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>&lt;input type="number" id="birthDay" name="birthDay" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-indigo-500 focus:ring focus:ring-indigo-500 focus:ring-opacity-50 p-3 text-lg" placeholder="15"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;button id="getFortuneButton" class="w-full bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-150 ease-in-out text-lg"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>2025년 운세 확인하기 ✨</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;p id="inputError" class="text-red-600 text-sm mt-3 text-center hidden"&gt;&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;p id="disclaimerText" class="text-xs text-gray-500 mt-6 text-center leading-relaxed"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>※ 본 운세 내용은 오락 및 참고 목적으로 제공되며, 미래의 특정 사건이나 결과를 확언하는 것이 아닙니다. &lt;br class="hidden sm:inline"&gt;개인의 중요한 결정은 신중한 판단 하에 이루어져야 합니다.</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;section id="fortune-display" class="hidden p-6 bg-slate-50 rounded-lg shadow-inner"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;h2 id="fortuneDisplayTitle" class="text-2xl font-semibold mb-3 text-gray-800 text-center"&gt;🌟 2025년(을사년) 당신의 운세 🌟&lt;/h2&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="ganjiDisplay" class="mb-6 p-4 bg-indigo-100 border-l-4 border-indigo-500 rounded-md text-indigo-800 text-lg text-center shadow"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="fortuneResult" class="text-gray-700 leading-relaxed fortune-text p-4 bg-white rounded-md shadow"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="loadingIndicator" class="hidden text-center py-8"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;div class="inline-block animate-spin rounded-full h-12 w-12 border-t-4 border-b-4 border-blue-500"&gt;&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;p id="loadingIndicatorText" class="mt-4 text-lg text-gray-600"&gt;당신의 운세를 정성껏 생성 중입니다...&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;section id="dreamInterpretationSection" class="feature-section"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;h3 id="dreamSectionTitle" class="text-xl font-semibold mb-4 text-purple-700 text-center"&gt;🌙 꿈 해몽 마법사 ✨&lt;/h3&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;p id="dreamFeatureNote" class="text-sm text-gray-600 mb-4 text-center"&gt;생년월일을 먼저 입력하시면 더욱 정확한 해몽을 받아보실 수 있습니다.&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;label for="dreamInput" id="dreamInputLabel" class="block text-sm font-medium text-gray-700 mb-1"&gt;어떤 꿈을 꾸셨나요?&lt;/label&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;textarea id="dreamInput" rows="3" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-purple-500 focus:ring focus:ring-purple-500 focus:ring-opacity-50 p-3 text-base" placeholder="예) 어젯밤 용이 하늘로 승천하는 꿈을 꾸었어요."&gt;&lt;/textarea&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;button id="getDreamInterpretationButton" class="mt-4 w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-150 ease-in-out text-lg"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>꿈 해몽 요청하기 ✨</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="dreamLoadingIndicator" class="hidden text-center py-6"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;div class="inline-block animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-purple-500"&gt;&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;p id="dreamLoadingText" class="mt-3 text-gray-600"&gt;꿈의 의미를 분석 중입니다...&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="dreamResult" class="mt-4 p-4 bg-white rounded-md shadow feature-text hidden"&gt;&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;p id="dreamError" class="text-red-600 text-sm mt-3 text-center hidden"&gt;&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;section id="luckCharmSection" class="feature-section"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;h3 id="luckCharmSectionTitle" class="text-xl font-semibold mb-4 text-teal-700 text-center"&gt;🍀 나만의 행운 부적/팁 ✨&lt;/h3&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                     </span>&lt;p id="luckCharmFeatureNote" class="text-sm text-gray-600 mb-4 text-center"&gt;생년월일을 먼저 입력하시면 더욱 개인화된 팁을 드립니다.&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;label for="wishInput" id="wishInputLabel" class="block text-sm font-medium text-gray-700 mb-1"&gt;어떤 소망이나 고민이 있으신가요?&lt;/label&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;input type="text" id="wishInput" class="mt-1 block w-full rounded-lg border-gray-300 shadow-sm focus:border-teal-500 focus:ring focus:ring-teal-500 focus:ring-opacity-50 p-3 text-base" placeholder="예) 재물운을 높이고 싶어요, 좋은 인연을 만나고 싶어요"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;button id="getLuckCharmButton" class="mt-4 w-full bg-gradient-to-r from-teal-500 to-cyan-500 hover:from-teal-600 hover:to-cyan-600 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-150 ease-in-out text-lg"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>행운팁 요청하기 ✨</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/button&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="luckCharmLoadingIndicator" class="hidden text-center py-6"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;div class="inline-block animate-spin rounded-full h-10 w-10 border-t-4 border-b-4 border-teal-500"&gt;&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>&lt;p id="luckCharmLoadingText" class="mt-3 text-gray-600"&gt;맞춤 행운팁을 생성 중입니다...&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;div id="luckCharmResult" class="mt-4 p-4 bg-white rounded-md shadow feature-text hidden"&gt;&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>&lt;p id="luckCharmError" class="text-red-600 text-sm mt-3 text-center hidden"&gt;&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;aside class="w-1/6 lg:w-1/5 p-2 md:p-4 hidden md:flex flex-col justify-start items-center space-y-4"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;div class="ad-banner w-full h-64 lg:h-96"&gt;광고 배너 (우측 상단)&lt;br&gt;Ad Banner (Right Top)&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;div class="ad-banner w-full h-64 lg:h-96"&gt;광고 배너 (좌측 하단)&lt;br&gt;Ad Banner (Left Bottom)&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;/aside&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;footer class="bg-gray-200 p-4 mt-auto"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>&lt;div class="ad-banner w-full max-w-screen-lg mx-auto h-24 md:h-32"&gt;광고 배너 (하단 중앙)&lt;br&gt;Ad Banner (Bottom Center)&lt;/div&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>&lt;/footer&gt;</p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;script type="module"&gt;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>// DOM 요소</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const getFortuneButton = document.getElementById('getFortuneButton');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const birthYearInput = document.getElementById('birthYear');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const birthMonthInput = document.getElementById('birthMonth');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const birthDayInput = document.getElementById('birthDay');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const inputError = document.getElementById('inputError');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const fortuneDisplaySection = document.getElementById('fortune-display');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const ganjiDisplay = document.getElementById('ganjiDisplay');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const fortuneResult = document.getElementById('fortuneResult');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const loadingIndicator = document.getElementById('loadingIndicator');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const languageSelectorButton = document.getElementById('languageSelectorButton');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const languageDropdown = document.getElementById('languageDropdown');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const currentLangDisplay = document.getElementById('currentLangDisplay');</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 새로운 기능 DOM 요소</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const getDreamInterpretationButton = document.getElementById('getDreamInterpretationButton');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const dreamInput = document.getElementById('dreamInput');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const dreamLoadingIndicator = document.getElementById('dreamLoadingIndicator');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const dreamResult = document.getElementById('dreamResult');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const dreamError = document.getElementById('dreamError');</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>const getLuckCharmButton = document.getElementById('getLuckCharmButton');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const wishInput = document.getElementById('wishInput');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const luckCharmLoadingIndicator = document.getElementById('luckCharmLoadingIndicator');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const luckCharmResult = document.getElementById('luckCharmResult');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>const luckCharmError = document.getElementById('luckCharmError');</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>const currentYearForFortune = 2025;</p>
+<p class="p3"><span class="Apple-converted-space">        </span>let currentLanguage = 'ko';</p>
+<p class="p3"><span class="Apple-converted-space">        </span>let userSajuGanji = null; // 사용자의 사주 간지 정보를 저장할 변수</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>const translations = {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>ko: {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>pageTitle: "사주팔자 올해의 운세 &amp; 추가 기능",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>headerTitle: "🔮 사주팔자로 보는 2025년 나의 운세 &amp; 더 많은 기능! 🔮",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>inputSectionTitle: "생년월일을 입력해주세요",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearLabel: "생년 (예: 1990)", monthLabel: "생월 (예: 7)", dayLabel: "생일 (예: 15)",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearPlaceholder: "1990", monthPlaceholder: "7", dayPlaceholder: "15",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getFortuneButton: "2025년 운세 확인하기 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>disclaimerText: "※ 본 운세 내용은 오락 및 참고 목적으로 제공되며, 미래의 특정 사건이나 결과를 확언하는 것이 아닙니다. &lt;br class=\"hidden sm:inline\"&gt;개인의 중요한 결정은 신중한 판단 하에 이루어져야 합니다.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneDisplayTitle: `🌟 ${currentYearForFortune}년(푸른 뱀의 해) 당신의 운세 🌟`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loadingIndicatorText: "당신의 운세를 정성껏 생성 중입니다...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorAllFields: "모든 생년월일 정보를 정확히 입력해주세요.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidYear: (year) =&gt; `유효한 생년을 입력해주세요 (1900년 ~ ${year}년).`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidMonth: "유효한 생월을 입력해주세요 (1월 ~ 12월).",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidDay: (days) =&gt; `유효한 생일을 입력해주세요 (1일 ~ ${days}일).`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiError: (status, message) =&gt; `API 요청에 실패했습니다. 상태: ${status}. 메시지: ${message}`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiResponseError: "정보를 받아오지 못했습니다. 응답 형식이 올바르지 않습니다.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>genericError: (message) =&gt; `오류가 발생했습니다: ${message}. 잠시 후 다시 시도해주세요.`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>ganjiInfo: "📜 당신의 사주 정보 (색상 동물 표기):",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneSummaryTitle: "✨ 총운 요약", wealthLuckTitle: "💰 재물운", careerLuckTitle: "👔 직업운 / 학업운",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loveLuckTitle: "💖 애정운 / 대인관계", healthLuckTitle: "💪 건강운", monthlyAdviceTitle: "📅 월별 조언",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>overallFortuneTitle: "📖 종합 상세 풀이",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>langKo: "한국어", langEn: "English", langJa: "日本語", langZh: "中文",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>monthNames: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamSectionTitle: "🌙 꿈 해몽 마법사 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamFeatureNote: "생년월일을 먼저 입력하시면 더욱 정확한 해몽을 받아보실 수 있습니다.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamInputLabel: "어떤 꿈을 꾸셨나요?",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamPlaceholder: "예) 어젯밤 용이 하늘로 승천하는 꿈을 꾸었어요.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getDreamInterpretationButton: "꿈 해몽 요청하기 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamLoadingText: "꿈의 의미를 분석 중입니다...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamErrorEmpty: "해몽할 꿈 내용을 입력해주세요.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamResultTitle: "🔮 꿈 해몽 결과:",</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmSectionTitle: "🍀 나만의 행운 부적/팁 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmFeatureNote: "생년월일을 먼저 입력하시면 더욱 개인화된 팁을 드립니다.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishInputLabel: "어떤 소망이나 고민이 있으신가요?",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishPlaceholder: "예) 재물운을 높이고 싶어요, 좋은 인연을 만나고 싶어요",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getLuckCharmButton: "행운팁 요청하기 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmLoadingText: "맞춤 행운팁을 생성 중입니다...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmErrorEmpty: "소망이나 고민 내용을 입력해주세요.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmResultTitle: "💡 당신을 위한 행운팁:"</p>
+<p class="p3"><span class="Apple-converted-space">            </span>},</p>
+<p class="p3"><span class="Apple-converted-space">            </span>en: {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>pageTitle: "Saju Fortune &amp; More Features",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>headerTitle: "🔮 Your 2025 Fortune &amp; More via Saju Palja! 🔮",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>inputSectionTitle: "Please enter your date of birth",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearLabel: "Birth Year (e.g., 1990)", monthLabel: "Birth Month (e.g., 7)", dayLabel: "Birth Day (e.g., 15)",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearPlaceholder: "1990", monthPlaceholder: "7", dayPlaceholder: "15",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getFortuneButton: "Check 2025 Fortune ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>disclaimerText: "※ This fortune content is provided for entertainment and reference purposes only and does not affirm future events or results. &lt;br class='hidden sm:inline'&gt;Important personal decisions should be made with careful judgment.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneDisplayTitle: `🌟 Your Fortune for ${currentYearForFortune} (Year of the Blue Snake) 🌟`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loadingIndicatorText: "Generating your fortune with care...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorAllFields: "Please enter all birth date information correctly.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidYear: (year) =&gt; `Please enter a valid birth year (1900 - ${year}).`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidMonth: "Please enter a valid birth month (January - December).",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidDay: (days) =&gt; `Please enter a valid birth day (1 - ${days}).`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiError: (status, message) =&gt; `API request failed. Status: ${status}. Message: ${message}`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiResponseError: "Failed to retrieve information. The response format is incorrect.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>genericError: (message) =&gt; `An error occurred: ${message}. Please try again later.`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>ganjiInfo: "📜 Your Saju Information (Color Animal Representation):",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneSummaryTitle: "✨ Overall Summary", wealthLuckTitle: "💰 Wealth Luck", careerLuckTitle: "👔 Career/Study Luck",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loveLuckTitle: "💖 Love/Relationship Luck", healthLuckTitle: "💪 Health Luck", monthlyAdviceTitle: "📅 Monthly Advice",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>overallFortuneTitle: "📖 Detailed Overall Reading",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>langKo: "한국어", langEn: "English", langJa: "日本語", langZh: "中文",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>monthNames: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamSectionTitle: "🌙 Dream Interpreter Wizard ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamFeatureNote: "Enter your birth date first for a more accurate dream interpretation.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamInputLabel: "What did you dream about?",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamPlaceholder: "e.g., Last night, I dreamt of a dragon ascending to the sky.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getDreamInterpretationButton: "Request Dream Interpretation ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamLoadingText: "Analyzing your dream...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamErrorEmpty: "Please enter your dream content for interpretation.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamResultTitle: "🔮 Dream Interpretation Result:",</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmSectionTitle: "🍀 Your Personalized Luck Charm/Tip ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmFeatureNote: "Enter your birth date first for a more personalized tip.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishInputLabel: "What is your wish or concern?",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishPlaceholder: "e.g., I want to improve my financial luck, I want to meet a good partner",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getLuckCharmButton: "Request Luck Tip ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmLoadingText: "Generating your custom luck tip...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmErrorEmpty: "Please enter your wish or concern.",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmResultTitle: "💡 Luck Tip for You:"</p>
+<p class="p3"><span class="Apple-converted-space">            </span>},</p>
+<p class="p3"><span class="Apple-converted-space">            </span>ja: {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>pageTitle: "四柱推命 今年の運勢と追加機能",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>headerTitle: "🔮 四柱推命で見る2025年の運勢とその他機能! 🔮",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>inputSectionTitle: "生年月日を入力してください",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearLabel: "生年 (例: 1990)", monthLabel: "生月 (例: 7)", dayLabel: "生日 (例: 15)",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearPlaceholder: "1990", monthPlaceholder: "7", dayPlaceholder: "15",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getFortuneButton: "2025年の運勢を確認する ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>disclaimerText: "※ この運勢内容は娯楽および参考目的で提供されており、未来の特定の出来事や結果を断言するものではありません。&lt;br class='hidden sm:inline'&gt;個人の重要な決定は慎重な判断の下で行われるべきです。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneDisplayTitle: `🌟 ${currentYearForFortune}年(青蛇の年) あなたの運勢 🌟`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loadingIndicatorText: "あなたの運勢を丁寧に生成中です...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorAllFields: "すべての生年月日情報を正しく入力してください。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidYear: (year) =&gt; `有効な生年を入力してください (1900年～${year}年)。`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidMonth: "有効な生月を入力してください (1月～12月)。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidDay: (days) =&gt; `有効な生日を入力してください (1日～${days}日)。`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiError: (status, message) =&gt; `APIリクエストに失敗しました。状態: ${status}。メッセージ: ${message}`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiResponseError: "情報を取得できませんでした。応答形式が正しくありません。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>genericError: (message) =&gt; `エラーが発生しました: ${message}。しばらくしてからもう一度お試しください。`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>ganjiInfo: "📜 あなたの四柱情報 (色・動物表記):",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneSummaryTitle: "✨ 総運概要", wealthLuckTitle: "💰 金運", careerLuckTitle: "👔 仕事運・学業運",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loveLuckTitle: "💖 愛情運・対人関係", healthLuckTitle: "💪 健康運", monthlyAdviceTitle: "📅 月別アドバイス",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>overallFortuneTitle: "📖 総合詳細解説",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>langKo: "한국어", langEn: "English", langJa: "日本語", langZh: "中文",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>monthNames: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamSectionTitle: "🌙 夢占いウィザード ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamFeatureNote: "より正確な夢占いのため、先に生年月日を入力してください。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamInputLabel: "どんな夢を見ましたか？",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamPlaceholder: "例）昨夜、龍が空に昇る夢を見ました。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getDreamInterpretationButton: "夢占いをリクエスト ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamLoadingText: "夢の意味を分析中です...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamErrorEmpty: "占う夢の内容を入力してください。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamResultTitle: "🔮 夢占いの結果:",</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmSectionTitle: "🍀 あなただけの幸運のお守り/ヒント ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmFeatureNote: "よりパーソナルなヒントのため、先に生年月日を入力してください。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishInputLabel: "どんな願いや悩みがありますか？",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishPlaceholder: "例）金運を上げたい、良い縁に巡り合いたい",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getLuckCharmButton: "幸運のヒントをリクエスト ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmLoadingText: "カスタム幸運ヒントを生成中です...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmErrorEmpty: "願いや悩みを入力してください。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmResultTitle: "💡 あなたへの幸運のヒント:"</p>
+<p class="p3"><span class="Apple-converted-space">            </span>},</p>
+<p class="p3"><span class="Apple-converted-space">            </span>zh: {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>pageTitle: "八字算命 今年的运势及附加功能",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>headerTitle: "🔮 通过八字看您2025年的运势及更多功能! 🔮",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>inputSectionTitle: "请输入您的出生年月日",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearLabel: "出生年份 (例如: 1990)", monthLabel: "出生月份 (例如: 7)", dayLabel: "出生日期 (例如: 15)",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>yearPlaceholder: "1990", monthPlaceholder: "7", dayPlaceholder: "15",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getFortuneButton: "查看2025年运势 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>disclaimerText: "※ 本运势内容仅供娱乐和参考之用，并不保证未来的特定事件或结果。&lt;br class='hidden sm:inline'&gt;个人的重要决定应在慎重判断下做出。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneDisplayTitle: `🌟 ${currentYearForFortune}年(青蛇年) 您的运势 🌟`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loadingIndicatorText: "正在精心生成您的运势...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorAllFields: "请正确输入所有出生年月日信息。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidYear: (year) =&gt; `请输入有效的出生年份 (1900年 - ${year}年)。`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidMonth: "请输入有效的出生月份 (1月 - 12月)。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>errorInvalidDay: (days) =&gt; `请输入有效的出生日期 (1日 - ${days}日)。`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiError: (status, message) =&gt; `API 请求失败。状态: ${status}。消息: ${message}`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>apiResponseError: "未能获取信息。响应格式不正确。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>genericError: (message) =&gt; `发生错误: ${message}。请稍后再试。`,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>ganjiInfo: "📜 您的八字信息 (颜色动物标记):",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneSummaryTitle: "✨ 总运概要", wealthLuckTitle: "💰 财运", careerLuckTitle: "👔 事业运/学业运",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>loveLuckTitle: "💖 爱情运/人际关系", healthLuckTitle: "💪 健康运", monthlyAdviceTitle: "📅 每月建议",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>overallFortuneTitle: "📖 综合详细解读",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>langKo: "한국어", langEn: "English", langJa: "日本語", langZh: "中文",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>monthNames: ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamSectionTitle: "🌙解梦魔法师 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamFeatureNote: "请先输入您的出生年月日，以便获得更准确的解梦。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamInputLabel: "您做了什么梦？",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamPlaceholder: "例如：昨晚我梦见一条龙飞向天空。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getDreamInterpretationButton: "请求解梦 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamLoadingText: "正在分析您的梦境...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamErrorEmpty: "请输入梦境内容以进行解梦。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>dreamResultTitle: "🔮 解梦结果:",</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmSectionTitle: "🍀 您的专属幸运符/提示 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmFeatureNote: "请先输入您的出生年月日，以便获得更个性化的提示。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishInputLabel: "您有什么愿望或烦恼吗？",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>wishPlaceholder: "例如：我想提升财运，我想遇到一个好的伴侣",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>getLuckCharmButton: "请求幸运提示 ✨",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmLoadingText: "正在生成您的定制幸运提示...",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmErrorEmpty: "请输入您的愿望或烦恼。",</p>
+<p class="p3"><span class="Apple-converted-space">                </span>luckCharmResultTitle: "💡 给您的幸运提示:"</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>};</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>function updateTextContent(lang) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const tr = translations[lang];</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.title = tr.pageTitle;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('headerTitle').textContent = tr.headerTitle;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('inputSectionTitle').textContent = tr.inputSectionTitle;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('yearLabelElement').textContent = tr.yearLabel;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>birthYearInput.placeholder = tr.yearPlaceholder;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('monthLabelElement').textContent = tr.monthLabel;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>birthMonthInput.placeholder = tr.monthPlaceholder;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('dayLabelElement').textContent = tr.dayLabel;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>birthDayInput.placeholder = tr.dayPlaceholder;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>getFortuneButton.textContent = tr.getFortuneButton;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('disclaimerText').innerHTML = tr.disclaimerText;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('fortuneDisplayTitle').textContent = tr.fortuneDisplayTitle;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('loadingIndicatorText').textContent = tr.loadingIndicatorText;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p3"><span class="Apple-converted-space">            </span>currentLangDisplay.textContent = tr[`lang${lang.charAt(0).toUpperCase() + lang.slice(1)}`];</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>// 새로운 기능 UI 텍스트 업데이트</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('dreamSectionTitle').textContent = tr.dreamSectionTitle;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('dreamFeatureNote').textContent = tr.dreamFeatureNote;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('dreamInputLabel').textContent = tr.dreamInputLabel;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>dreamInput.placeholder = tr.dreamPlaceholder;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>getDreamInterpretationButton.textContent = tr.getDreamInterpretationButton;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('dreamLoadingText').textContent = tr.dreamLoadingText;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('luckCharmSectionTitle').textContent = tr.luckCharmSectionTitle;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('luckCharmFeatureNote').textContent = tr.luckCharmFeatureNote;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('wishInputLabel').textContent = tr.wishInputLabel;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>wishInput.placeholder = tr.wishPlaceholder;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>getLuckCharmButton.textContent = tr.getLuckCharmButton;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('luckCharmLoadingText').textContent = tr.luckCharmLoadingText;</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (!fortuneDisplaySection.classList.contains('hidden') &amp;&amp; fortuneResult.innerHTML !== '') {</p>
+<p class="p3"><span class="Apple-converted-space">                 </span>fortuneDisplaySection.classList.add('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">                 </span>fortuneResult.innerHTML = '';</p>
+<p class="p3"><span class="Apple-converted-space">                 </span>ganjiDisplay.innerHTML = '';</p>
+<p class="p3"><span class="Apple-converted-space">                 </span>userSajuGanji = null; // 사주 정보 초기화</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>// 추가 기능 결과 영역도 언어 변경 시 초기화</p>
+<p class="p3"><span class="Apple-converted-space">            </span>dreamResult.classList.add('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>dreamResult.innerHTML = '';</p>
+<p class="p3"><span class="Apple-converted-space">            </span>luckCharmResult.classList.add('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>luckCharmResult.innerHTML = '';</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>languageSelectorButton.addEventListener('click', () =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>languageDropdown.classList.toggle('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>document.querySelectorAll('.lang-option').forEach(option =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>option.addEventListener('click', (e) =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>e.preventDefault();</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const selectedLang = e.target.dataset.lang;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>if (selectedLang !== currentLanguage) {</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>currentLanguage = selectedLang;</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>updateTextContent(currentLanguage);</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>document.documentElement.lang = currentLanguage;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>}</p>
+<p class="p3"><span class="Apple-converted-space">                </span>languageDropdown.classList.add('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>});</p>
+<p class="p3"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p3"><span class="Apple-converted-space">        </span>document.addEventListener('click', (event) =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (!languageSelectorButton.contains(event.target) &amp;&amp; !languageDropdown.contains(event.target)) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>languageDropdown.classList.add('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// API 호출 함수 (공통 로직 일부 추출 가능)</p>
+<p class="p3"><span class="Apple-converted-space">        </span>async function callGeminiAPI(prompt, schema) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>let chatHistory = [{ role: "user", parts: [{ text: prompt }] }];</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const payload = {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>contents: chatHistory,</p>
+<p class="p3"><span class="Apple-converted-space">                </span>generationConfig: {</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>responseMimeType: "application/json",</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>responseSchema: schema</p>
+<p class="p3"><span class="Apple-converted-space">                </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>};</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const apiKey = ""; // API 키는 비워둡니다.</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>const response = await fetch(apiUrl, {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>method: 'POST',</p>
+<p class="p3"><span class="Apple-converted-space">                </span>headers: { 'Content-Type': 'application/json' },</p>
+<p class="p3"><span class="Apple-converted-space">                </span>body: JSON.stringify(payload)</p>
+<p class="p3"><span class="Apple-converted-space">            </span>});</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (!response.ok) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const errorData = await response.json().catch(() =&gt; ({ error: { message: "Response body could not be parsed." } }));</p>
+<p class="p3"><span class="Apple-converted-space">                </span>console.error("API Error Response:", errorData);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>throw new Error(translations[currentLanguage].apiError(response.status, errorData?.error?.message || response.statusText));</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const result = await response.json();</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (result.candidates &amp;&amp; result.candidates.length &gt; 0 &amp;&amp;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>result.candidates[0].content &amp;&amp; result.candidates[0].content.parts &amp;&amp;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>result.candidates[0].content.parts.length &gt; 0) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>return JSON.parse(result.candidates[0].content.parts[0].text);</p>
+<p class="p3"><span class="Apple-converted-space">            </span>} else {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>console.error("API response format error:", result);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>throw new Error(translations[currentLanguage].apiResponseError);</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>getFortuneButton.addEventListener('click', async () =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const year = birthYearInput.value;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const month = birthMonthInput.value;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const day = birthDayInput.value;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (!year || !month || !day) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayMainError("errorAllFields");</p>
+<p class="p3"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const yearNum = parseInt(year);</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const monthNum = parseInt(month);</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const dayNum = parseInt(day);</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const currentMaxYear = new Date().getFullYear();</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (isNaN(yearNum) || yearNum &lt; 1900 || yearNum &gt; currentMaxYear) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayMainError("errorInvalidYear", currentMaxYear);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (isNaN(monthNum) || monthNum &lt; 1 || monthNum &gt; 12) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayMainError("errorInvalidMonth");</p>
+<p class="p3"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const daysInMonth = new Date(yearNum, monthNum, 0).getDate();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (isNaN(dayNum) || dayNum &lt; 1 || dayNum &gt; daysInMonth) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayMainError("errorInvalidDay", daysInMonth);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>hideMainError();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>showMainLoading();</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const langNameForPrompt = { ko: "한국어", en: "English", ja: "日本語", zh: "中文 (Simplified)" }[currentLanguage];</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const targetYearGanjiName = {</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>ko: "푸른 뱀의 해", en: "Blue Snake Year", ja: "青蛇の年", zh: "青蛇年"</p>
+<p class="p3"><span class="Apple-converted-space">                </span>}[currentLanguage];</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>const prompt = `사용자의 생년월일은 ${yearNum}년 ${monthNum}월 ${dayNum}일입니다.<span class="Apple-converted-space"> </span></p>
+<p class="p3">이 생년월일을 바탕으로 사용자의 사주팔자(년주, 월주, 일주)를 구성할 때, 각 주(柱)를 ${langNameForPrompt}로 표현하되, '색상 동물 단위 (예: White Dragon Year, Yellow Tiger Month, Blue Snake Day)' 형식으로 명확하게 변환해주십시오.<span class="Apple-converted-space"> </span></p>
+<p class="p3">이를 바탕으로 ${currentYearForFortune}년(${targetYearGanjiName}) 한 해의 종합 운세를 사주팔자 스타일로 자세히 설명해주세요.<span class="Apple-converted-space"> </span></p>
+<p class="p3">모든 운세 설명은 반드시 ${langNameForPrompt}로 작성해주세요.<span class="Apple-converted-space"> </span></p>
+<p class="p3">운세 내용은 사용자의 출생 사주 정보와 ${currentYearForFortune}년(${targetYearGanjiName})과의 관계를 중심으로,<span class="Apple-converted-space"> </span></p>
+<p class="p3">(1) 전체적인 총운, (2) 재물운, (3) 직업운/학업운, (4) 애정운/대인관계, (5) 건강운,<span class="Apple-converted-space"> </span></p>
+<p class="p3">그리고 (6) 월별 간단 조언 (1월~12월)을 포함하여 희망적이면서도 조심해야 할 부분에 대한 구체적인 조언을 담아주세요.<span class="Apple-converted-space"> </span></p>
+<p class="p3">응답을 다음 JSON 형식으로 제공해주세요 (JSON 키는 영어로 유지하되, 값은 ${langNameForPrompt}로 제공):</p>
+<p class="p3">{</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"ganji": "${langNameForPrompt}로 표현된 사용자 출생 사주 정보 (예: White Dragon Year, Yellow Tiger Month, Blue Snake Day)",</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"fortune_summary": "${currentYearForFortune}년(${targetYearGanjiName}) 전체적인 운세 요약 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"wealth_luck": "${currentYearForFortune}년(${targetYearGanjiName}) 재물운 상세 설명 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"career_luck": "${currentYearForFortune}년(${targetYearGanjiName}) 직업운 또는 학업운 상세 설명 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"love_luck": "${currentYearForFortune}년(${targetYearGanjiName}) 애정운 및 대인관계 상세 설명 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"health_luck": "${currentYearForFortune}년(${targetYearGanjiName}) 건강운 상세 설명 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"monthly_advice": {</p>
+<p class="p3"><span class="Apple-converted-space">    </span>"january": "1월 조언 (${langNameForPrompt})", "february": "2월 조언 (${langNameForPrompt})", "march": "3월 조언 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">    </span>"april": "4월 조언 (${langNameForPrompt})", "may": "5월 조언 (${langNameForPrompt})", "june": "6월 조언 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">    </span>"july": "7월 조언 (${langNameForPrompt})", "august": "8월 조언 (${langNameForPrompt})", "september": "9월 조언 (${langNameForPrompt})",</p>
+<p class="p3"><span class="Apple-converted-space">    </span>"october": "10월 조언 (${langNameForPrompt})", "november": "11월 조언 (${langNameForPrompt})", "december": "12월 조언 (${langNameForPrompt})"</p>
+<p class="p3"><span class="Apple-converted-space">  </span>},</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"overall_fortune_details": "위 항목들을 종합한 상세 운세 설명 (${langNameForPrompt}, 각 운세 항목을 자연스럽게 연결하여 서술)"</p>
+<p class="p3">}`;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const schema = {</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>type: "OBJECT",</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>properties: {</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>"ganji": { "type": "STRING" }, "fortune_summary": { "type": "STRING" },</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>"wealth_luck": { "type": "STRING" }, "career_luck": { "type": "STRING" },</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>"love_luck": { "type": "STRING" }, "health_luck": { "type": "STRING" },</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>"monthly_advice": {</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>type: "OBJECT",</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>properties: { /* ... month properties ... */</p>
+<p class="p3"><span class="Apple-converted-space">                                </span>"january": { "type": "STRING" }, "february": { "type": "STRING" }, "march": { "type": "STRING" },</p>
+<p class="p3"><span class="Apple-converted-space">                                </span>"april": { "type": "STRING" }, "may": { "type": "STRING" }, "june": { "type": "STRING" },</p>
+<p class="p3"><span class="Apple-converted-space">                                </span>"july": { "type": "STRING" }, "august": { "type": "STRING" }, "september": { "type": "STRING" },</p>
+<p class="p3"><span class="Apple-converted-space">                                </span>"october": { "type": "STRING" }, "november": { "type": "STRING" }, "december": { "type": "STRING" }</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>},</p>
+<p class="p3"><span class="Apple-converted-space">                            </span>required: ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>},</p>
+<p class="p3"><span class="Apple-converted-space">                        </span>"overall_fortune_details": { "type": "STRING" }</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>required: ["ganji", "fortune_summary", "wealth_luck", "career_luck", "love_luck", "health_luck", "monthly_advice", "overall_fortune_details"]</p>
+<p class="p3"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><span class="Apple-converted-space">                </span></p>
+<p class="p3"><span class="Apple-converted-space">                </span>const parsedJson = await callGeminiAPI(prompt, schema);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayFortune(parsedJson);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>userSajuGanji = parsedJson.ganji; // 사주 간지 정보 저장</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>console.error("Error generating fortune:", error);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayMainError("genericError", error.message);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>userSajuGanji = null;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>} finally {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>hideMainLoading();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 꿈 해몽 기능</p>
+<p class="p3"><span class="Apple-converted-space">        </span>getDreamInterpretationButton.addEventListener('click', async () =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const dreamText = dreamInput.value.trim();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (!dreamText) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayDreamError("dreamErrorEmpty");</p>
+<p class="p3"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>hideDreamError();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>showDreamLoading();</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const langNameForPrompt = { ko: "한국어", en: "English", ja: "日本語", zh: "中文 (Simplified)" }[currentLanguage];</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const birthInfo = (birthYearInput.value &amp;&amp; birthMonthInput.value &amp;&amp; birthDayInput.value) ?<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">                                  </span>`${birthYearInput.value}년 ${birthMonthInput.value}월 ${birthDayInput.value}일생` : "알 수 없음";</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const sajuContext = userSajuGanji ? `이 사용자의 사주 간지는 ${userSajuGanji}입니다.` : "사용자의 사주 정보는 제공되지 않았습니다.";</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>const prompt = `사용자 정보: ${birthInfo}. ${sajuContext}</p>
+<p class="p3">사용자가 꾼 꿈은 다음과 같습니다: "${dreamText}"</p>
+<p class="p3">이 꿈에 대해 전통적인 동양(특히 한국)의 꿈 해몽 방식이나 상징주의에 입각하여 ${langNameForPrompt}로 해석해주세요.<span class="Apple-converted-space"> </span></p>
+<p class="p3">해석은 긍정적인 부분과 주의할 점을 포함할 수 있으며, 사용자에게 도움이 될 만한 조언을 덧붙여주세요.</p>
+<p class="p3">응답을 다음 JSON 형식으로 제공해주세요 (값은 ${langNameForPrompt}로 제공):</p>
+<p class="p3">{</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"interpretation": "꿈 해몽 결과 상세 설명 (${langNameForPrompt})"</p>
+<p class="p3">}`;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const schema = {</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>type: "OBJECT",</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>properties: { "interpretation": { "type": "STRING" } },</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>required: ["interpretation"]</p>
+<p class="p3"><span class="Apple-converted-space">                </span>};</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const parsedJson = await callGeminiAPI(prompt, schema);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayDreamResult(parsedJson.interpretation);</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>console.error("Error interpreting dream:", error);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayDreamError("genericError", error.message);</p>
+<p class="p3"><span class="Apple-converted-space">            </span>} finally {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>hideDreamLoading();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 행운 부적/팁 기능</p>
+<p class="p3"><span class="Apple-converted-space">        </span>getLuckCharmButton.addEventListener('click', async () =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const wishText = wishInput.value.trim();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (!wishText) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayLuckCharmError("luckCharmErrorEmpty");</p>
+<p class="p3"><span class="Apple-converted-space">                </span>return;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">            </span>hideLuckCharmError();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>showLuckCharmLoading();</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>try {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const langNameForPrompt = { ko: "한국어", en: "English", ja: "日本語", zh: "中文 (Simplified)" }[currentLanguage];</p>
+<p class="p3"><span class="Apple-converted-space">                 </span>const birthInfo = (birthYearInput.value &amp;&amp; birthMonthInput.value &amp;&amp; birthDayInput.value) ?<span class="Apple-converted-space"> </span></p>
+<p class="p3"><span class="Apple-converted-space">                                  </span>`${birthYearInput.value}년 ${birthMonthInput.value}월 ${birthDayInput.value}일생` : "알 수 없음";</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const sajuContext = userSajuGanji ? `이 사용자의 사주 간지는 ${userSajuGanji}입니다.` : "사용자의 사주 정보는 제공되지 않았습니다.";</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>const prompt = `사용자 정보: ${birthInfo}. ${sajuContext}</p>
+<p class="p3">사용자의 현재 소망 또는 고민은 다음과 같습니다: "${wishText}"</p>
+<p class="p3">이 사용자의 소망/고민과 (제공되었다면) 사주 정보를 고려하여, ${langNameForPrompt}로 실천 가능하고 긍정적인 행운 팁, 작은 행운 아이템 추천, 또는 간단한 조언을 해주세요.<span class="Apple-converted-space"> </span></p>
+<p class="p3">문화적으로 민감하지 않으면서도 격려가 되는 내용으로 작성해주세요.</p>
+<p class="p3">응답을 다음 JSON 형식으로 제공해주세요 (값은 ${langNameForPrompt}로 제공):</p>
+<p class="p3">{</p>
+<p class="p3"><span class="Apple-converted-space">  </span>"luck_tip": "개인 맞춤 행운팁 상세 설명 (${langNameForPrompt})"</p>
+<p class="p3">}`;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>const schema = {</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>type: "OBJECT",</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>properties: { "luck_tip": { "type": "STRING" } },</p>
+<p class="p3"><span class="Apple-converted-space">                    </span>required: ["luck_tip"]</p>
+<p class="p3"><span class="Apple-converted-space">                </span>};</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">                </span>const parsedJson = await callGeminiAPI(prompt, schema);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayLuckCharmResult(parsedJson.luck_tip);</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">            </span>} catch (error) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>console.error("Error generating luck charm tip:", error);</p>
+<p class="p3"><span class="Apple-converted-space">                </span>displayLuckCharmError("genericError", error.message);</p>
+<p class="p3"><span class="Apple-converted-space">            </span>} finally {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>hideLuckCharmLoading();</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 메인 운세 오류 및 로딩 함수</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function displayMainError(messageKey, ...args) { displayError(inputError, messageKey, ...args); fortuneDisplaySection.classList.add('hidden');}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideMainError() { hideError(inputError); }</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function showMainLoading() { showLoading(loadingIndicator, getFortuneButton); fortuneDisplaySection.classList.remove('hidden'); ganjiDisplay.innerHTML = ''; fortuneResult.innerHTML = '';}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideMainLoading() { hideLoading(loadingIndicator, getFortuneButton); }</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 꿈 해몽 오류 및 로딩 함수</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function displayDreamError(messageKey, ...args) { displayError(dreamError, messageKey, ...args); dreamResult.classList.add('hidden'); }</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideDreamError() { hideError(dreamError); }</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function showDreamLoading() { showLoading(dreamLoadingIndicator, getDreamInterpretationButton); dreamResult.classList.add('hidden'); dreamResult.innerHTML = ''; }</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideDreamLoading() { hideLoading(dreamLoadingIndicator, getDreamInterpretationButton); }</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 행운팁 오류 및 로딩 함수</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function displayLuckCharmError(messageKey, ...args) { displayError(luckCharmError, messageKey, ...args); luckCharmResult.classList.add('hidden');}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideLuckCharmError() { hideError(luckCharmError); }</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function showLuckCharmLoading() { showLoading(luckCharmLoadingIndicator, getLuckCharmButton); luckCharmResult.classList.add('hidden'); luckCharmResult.innerHTML = ''; }</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideLuckCharmLoading() { hideLoading(luckCharmLoadingIndicator, getLuckCharmButton); }</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 공통 오류 및 로딩 표시/숨김 로직</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function displayError(errorElement, messageKey, ...args) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const tr = translations[currentLanguage];</p>
+<p class="p3"><span class="Apple-converted-space">            </span>let messageTemplate = tr[messageKey] || messageKey;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>errorElement.textContent = (typeof messageTemplate === 'function') ? messageTemplate(...args) : messageTemplate;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>errorElement.classList.remove('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideError(errorElement) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>errorElement.classList.add('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function showLoading(loaderElement, buttonElement) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>loaderElement.classList.remove('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (buttonElement) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>buttonElement.disabled = true;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>buttonElement.classList.add('opacity-50', 'cursor-not-allowed');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function hideLoading(loaderElement, buttonElement) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>loaderElement.classList.add('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>if (buttonElement) {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>buttonElement.disabled = false;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>buttonElement.classList.remove('opacity-50', 'cursor-not-allowed');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>}</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 메인 운세 결과 표시</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function displayFortune(data) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const tr = translations[currentLanguage];</p>
+<p class="p3"><span class="Apple-converted-space">            </span>fortuneDisplaySection.classList.remove('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">            </span>document.getElementById('fortuneDisplayTitle').textContent = tr.fortuneDisplayTitle;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>ganjiDisplay.innerHTML = `&lt;strong&gt;${tr.ganjiInfo}&lt;/strong&gt; ${data.ganji}`;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p3"><span class="Apple-converted-space">            </span>let fortuneHTML = `</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold mt-4 mb-2 text-indigo-700"&gt;✨ ${tr.fortuneSummaryTitle}&lt;/h3&gt;&lt;p class="mb-4"&gt;${data.fortune_summary}&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold mt-4 mb-2 text-green-700"&gt;💰 ${tr.wealthLuckTitle}&lt;/h3&gt;&lt;p class="mb-4"&gt;${data.wealth_luck}&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold mt-4 mb-2 text-sky-700"&gt;👔 ${tr.careerLuckTitle}&lt;/h3&gt;&lt;p class="mb-4"&gt;${data.career_luck}&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold mt-4 mb-2 text-rose-700"&gt;💖 ${tr.loveLuckTitle}&lt;/h3&gt;&lt;p class="mb-4"&gt;${data.love_luck}&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold mt-4 mb-2 text-amber-700"&gt;💪 ${tr.healthLuckTitle}&lt;/h3&gt;&lt;p class="mb-4"&gt;${data.health_luck}&lt;/p&gt;</p>
+<p class="p3"><span class="Apple-converted-space">                </span>&lt;h3 class="text-xl font-semibold mt-6 mb-3 text-purple-700"&gt;📅 ${tr.monthlyAdviceTitle}&lt;/h3&gt;&lt;ul class="list-disc list-inside space-y-1 mb-4 pl-2"&gt;`;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const monthOrder = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"];</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const currentMonthNames = tr.monthNames;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>monthOrder.forEach((monthKey, index) =&gt; {</p>
+<p class="p3"><span class="Apple-converted-space">                </span>fortuneHTML += `&lt;li&gt;&lt;strong&gt;${currentMonthNames[index]}:&lt;/strong&gt; ${data.monthly_advice[monthKey]}&lt;/li&gt;`;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>});</p>
+<p class="p3"><span class="Apple-converted-space">            </span>fortuneHTML += `&lt;/ul&gt;&lt;h3 class="text-xl font-semibold mt-6 mb-3 text-gray-700"&gt;📖 ${tr.overallFortuneTitle}&lt;/h3&gt;&lt;p&gt;${data.overall_fortune_details}&lt;/p&gt;`;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>fortuneResult.innerHTML = fortuneHTML;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>hideMainError();</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 꿈 해몽 결과 표시</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function displayDreamResult(interpretation) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const tr = translations[currentLanguage];</p>
+<p class="p3"><span class="Apple-converted-space">            </span>dreamResult.innerHTML = `&lt;strong&gt;${tr.dreamResultTitle}&lt;/strong&gt;&lt;br&gt;${interpretation}`;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>dreamResult.classList.remove('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>// 행운팁 결과 표시</p>
+<p class="p3"><span class="Apple-converted-space">        </span>function displayLuckCharmResult(tip) {</p>
+<p class="p3"><span class="Apple-converted-space">            </span>const tr = translations[currentLanguage];</p>
+<p class="p3"><span class="Apple-converted-space">            </span>luckCharmResult.innerHTML = `&lt;strong&gt;${tr.luckCharmResultTitle}&lt;/strong&gt;&lt;br&gt;${tip}`;</p>
+<p class="p3"><span class="Apple-converted-space">            </span>luckCharmResult.classList.remove('hidden');</p>
+<p class="p3"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">        </span>updateTextContent(currentLanguage);</p>
+<p class="p3"><span class="Apple-converted-space">        </span>document.documentElement.lang = currentLanguage;</p>
+<p class="p2"><br></p>
+<p class="p3"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p3">&lt;/body&gt;</p>
+<p class="p3">&lt;/html&gt;</p>
+<p class="p2"><br></p>
+</body>
+</html>
